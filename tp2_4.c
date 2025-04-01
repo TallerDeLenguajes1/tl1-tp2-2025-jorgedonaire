@@ -9,6 +9,8 @@ struct compu
     char *tipo_cpu; //Tipo de procesador (apuntador a cadena de caracteres)
 };
 
+void listarPCs(struct compu pcs[], int cantidad);
+
 int main()
 {
     srand(time(NULL));
@@ -26,6 +28,21 @@ int main()
         *p++;
     }
     
+    listarPCs(computadoras,5);
+
     return 0;
 }
 
+void listarPCs(struct compu pcs[], int cantidad){
+    printf("******* LISTADO DE PCs ******** \n");
+    for ( int j = 0; j < cantidad; j++)
+    {
+        printf("PC nro %d\n", j);
+        printf("Velocidad: %d\n", pcs[j].velocidad);
+        printf("Año: %d\n", pcs[j].anio);
+        printf("Cantidad de nucleos: %d\n", pcs[j].cantidad_nucleos);
+        printf("Tipo de procesador: %s\n", pcs[j].tipo_cpu);
+        printf("-------------------\n");
+    }
+    printf("\n");
+}

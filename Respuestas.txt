@@ -1,0 +1,2 @@
+2. f) ¿Puede ver el archivo tp2_1_2.c? ¿Por qué? 
+No se puede ver el archivo ya que fue creado en la rama Opcion_2 y ahora estamos en la rama main.
